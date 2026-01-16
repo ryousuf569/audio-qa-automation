@@ -1,0 +1,6 @@
+file_id,metric,value,status
+data/raw/disco.00000.wav,SilenceRatio,0,OK
+data/raw/disco.00000.wav,DynamicRange,15.7273,OK
+data/raw/disco.00000.wav,NoiseZCR,0.261621,WARN
+data/raw/disco.00000.wav,Brightness,4026.41,OK
+data/raw/disco.00000.wav,TransientStrength,6.06972,OK
