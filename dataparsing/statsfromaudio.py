@@ -94,4 +94,6 @@ df = pd.read_csv("data/processed/tempdata.csv")
 df = df.drop('Unnamed: 0', axis = 1)
 series = extract_file_level_stats(df)
 stat_df = pd.DataFrame(series).T
-stat_df.to_csv("data/processed/stats.csv")
+stat_df['file_id'] = df['file_path']
+stat_df = stat_df[['file_id'] + [col for col in stat_df.columns if col != 'file_id']]
+stat_df.to_csv("data/processed/stats.csv", index=False)

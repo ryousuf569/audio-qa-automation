@@ -42,5 +42,6 @@ path = "data/raw/disco.00000.wav"
 y, sr = load_stem(path)
 features = stem_features(y, sr)
 df = pd.DataFrame(features)
+df['file_path'] = path
 
 df.to_csv("data/processed/tempdata.csv")
