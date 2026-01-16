@@ -1,4 +1,4 @@
-// g++ analysis/main.cpp analysis/ingestion.cpp analysis/analysis.cpp -o audio_qa
+// g++ computation/main.cpp computation/ingestion.cpp computation/analysis.cpp -o audio_qa
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -86,7 +86,7 @@ int main() {
         vector<Statistics> files =
             load_features_csv("data/processed/stats.csv");
 
-        ofstream output("data/processed/analysis_results.csv");
+        ofstream output("data/processed/computation_results.csv");
         if (!output.is_open()) {
             throw runtime_error("Could not open output CSV");
         }
